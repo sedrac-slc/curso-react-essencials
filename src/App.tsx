@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { Link } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='flex gap-4 justify-center'>
         <a href="https://vitejs.dev" target="_blank" rel='noopener'>
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -18,16 +19,21 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button className='bg-indigo-500 rounded p-2 text-white'  onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        <p className='mt-2'>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div className='flex justify-center gap-2'>
+        <Link to="/home">Home</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/dashboard">Dashboard</Link>
+      </div>
     </>
   )
 }

@@ -5,18 +5,14 @@ import './index.css'
 
 import App from './App'
 import Home from './pages/Home'
+import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 
 const router = createBrowserRouter([
-  {
-    path: "/", element: <App/>
-  },
-  {
-    path: "/home", element: <Home/>
-  },
-  {
-    path: "/dashboard", element: <Dashboard/>
-  }
+  { path: "/", element: <App/> },
+  { path: "/home", element: <Home/> },
+  { path: "/login", element: <Login/> },
+  { path: "/dashboard", element: <Dashboard/> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
